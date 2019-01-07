@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="xyz.alerta.epsars" version="0.0.2">
-<name>Rio Panuco</name>
-<description>xyz.alerta.epsars</description>
-<author href="https://www.ecologiaypetroleo.com/" email="soporte@ecologiaypetroleo.com">EPSA</author>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="app.riopanuco.ga" version="0.0.1">
+<name>Distribuidora Río Pánuco</name>
+<description>app.riopanuco.ga</description>
+<author href="http://www.distribuidorariopanuco.com" email="soporte@riopanuco.ga">EPSA</author>
 
 <preference name="phonegap-version" value="cli-7.1.0" />
 <preference name="DisallowOverscroll" value="true"/>
@@ -64,12 +64,12 @@
 
 <gap:plugin name="cordova-plugin-x-toast" source="npm" />
 <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-<param name="URL_SCHEME" value="alerta-anonima" />
+<param name="URL_SCHEME" value="riopanuco" />
 </gap:plugin>
 
 <!-- <plugin name="phonegap-plugin-push" spec="~2.0.0" source="npm"> spec="~1.4.5" -->
 <plugin name="phonegap-plugin-push" source="npm" spec="~2.0.0">
-<param name="SENDER_ID" value="567517067874" />
+<param name="SENDER_ID" value="361329804221" />
 </plugin>
 <platform name="android">
 <resource-file src="google-services.json" target="google-services.json" />
