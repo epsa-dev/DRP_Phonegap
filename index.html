@@ -189,6 +189,11 @@ Favor de ingresar unidad <b>FZN-1666</b> a la Isla <b># 3</b>
 </div>
 <!-- END Page Container -->
 
+<script src="assets/js/codebase.core.min.js"></script>
+<script src="assets/js/codebase.app.min.js"></script>
+<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
 <script type="text/javascript" charset="ISO-8859-1">
 if ( typeof device == 'undefined'){ var device = {}; }
 
@@ -245,14 +250,11 @@ document.addEventListener("offline", onOffline, false);
 function ActivateOnline(){ window.onOnline(); }
 </script>
 
-<script src="assets/js/codebase.core.min.js"></script>
-<script src="assets/js/codebase.app.min.js"></script>
-<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="assets/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
 <script>
 jQuery(document).ready(function($){
 $.getScript(window.url_server+'/assets/js/app.ajax.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){  });
 });
 </script>
+
 </body>
 </html>
