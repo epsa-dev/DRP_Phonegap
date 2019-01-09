@@ -190,6 +190,8 @@ Favor de ingresar unidad <b>FZN-1666</b> a la Isla <b># 3</b>
 <!-- END Page Container -->
 
 <script type="text/javascript" charset="ISO-8859-1">
+if ( typeof device == 'undefined'){ var device = {}; }
+
 var app = {
 initialize: function(){ this.bindEvents(); },
 bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
@@ -203,8 +205,6 @@ receivedEvent: function(id){  }
 app.initialize();
 
 jQuery(document).ready(function($){ });
-if ( typeof device == 'undefined'){ var device = {}; }
-
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
 if(handle) {  } else { handle = window.handle_url; }
@@ -215,7 +215,7 @@ var geo_aprox = window.localStorage.getItem("geo_aprox");
 //alert(token_push);
 $.ajaxSetup({ async:true, cache: true });
 $.getScript(window.url_server+'/assets/js/header_web.php?is_app=1&id_cliente='+window.id_cliente+'&key='+window.my_uuid+'&token_push=' + window.localStorage.getItem('token_push')+'&device='+JSON.stringify(device) + '&lat='+User_Lat + '&lon='+User_Lon + '&geo_aprox='+geo_aprox+'&handle_url='+JSON.stringify(handle)+'&is_app=1', function(){
-$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i></div></div>");
+//$(".ajax-content").html("<div class='main-content'><div align='center'><i class='fa fa-cog fa-spin'></i></div></div>");
 });
 $(".ajax-content").ajaxError(function( e, jqxhr, settings, exception ) {
 $(this).prepend("No se pudo enlazar con el servidor.<br>" + e + "<br>"+jqxhr);
