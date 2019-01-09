@@ -203,8 +203,8 @@ receivedEvent: function(id){  }
 app.initialize();
 
 jQuery(document).ready(function($){ });
+if ( typeof device == 'undefined'){ var device = {}; }
 
-//var device = {};
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
 if(handle) {  } else { handle = window.handle_url; }
@@ -239,7 +239,7 @@ location = "index.html";
 navigator.notification.confirm('¿Esta seguro?', onConfirm,'Esta por borrar sus datos', ['Si','No'] );
 };
 
-//ActivateOnline();
+ActivateOnline();
 document.addEventListener("offline", onOffline, false);
 //document.addEventListener("online", ActivateOnline, false);
 function ActivateOnline(){ window.onOnline(); }

@@ -149,7 +149,6 @@ download: false,
 hash: false
 });
 };
-
 window.enable_gallery();
 });
 
@@ -165,6 +164,5 @@ var data_html = j['content'];
 $(".ajax-content").html(data_html);
 $("body").removeClass("aside-toggled");
 });
-
 };
 
