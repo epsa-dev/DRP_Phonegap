@@ -10,7 +10,9 @@ var ip = "";
 var url_server = "https://app.riopanuco.ga";
 var id_n = "";
 var uid_cookie = "";
-var is_app = "";
+var is_app = "1";
+window.localStorage.setItem('is_app', is_app);
+var get_token = localStorage.getItem('token');
 
 $.root_ = $('body');
 $.navAsAjax = true;
@@ -204,7 +206,7 @@ function total_cargado(total){ $(".response_upload_text").html(""+ total+"%"); $
 function total_cargado_kb(total){ $(".response_upload_text").html(""+ total+" kbs"); console.log(total+" kbs"); }
 
 function loadURL(url, container) {
-if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index?is_app="+is_app; } else { url = url_server+"/_/" + url; }
+if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index?is_app="+is_app+"&token="+get_token; } else { url = url_server+"/_/" + url; }
 if (debugState) { root.console.log("Loading URL: %c" + url, debugStyle); }
 console.log(url);
 
