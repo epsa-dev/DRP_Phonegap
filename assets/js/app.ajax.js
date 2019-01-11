@@ -1,18 +1,22 @@
-var key = "";
-var key_dev = "";
-var id_cliente = "";
-var lat = "";
-var lon = "";
-var session_id = "";
-var user_agent = "";
-var Usuario = "";
-var ip = "";
+var key = window.my_uuid;
 var url_server = "https://app.riopanuco.ga";
-var id_n = "";
-var uid_cookie = "";
+var key_dev = localStorage.getItem('key_dev');
+var id_cliente = localStorage.getItem('id_cliente');
+var lat = localStorage.getItem('lat');
+var lon = localStorage.getItem('lon');
+var session_id = localStorage.getItem('session_id');
+var user_agent = localStorage.getItem('user_agent');
+var Usuario = localStorage.getItem('Usuario');
+var ip = localStorage.getItem('ip');
+
+var id_n = localStorage.getItem('id_n');
+var uid_cookie = localStorage.getItem('uid_cookie');
+
 var is_app = "1";
 window.localStorage.setItem('is_app', is_app);
 var get_token = localStorage.getItem('token');
+
+var params_loadurl = "?is_app="+is_app+"&token="+get_token+"&uuid="+window.my_uuid;
 
 $.root_ = $('body');
 $.navAsAjax = true;
@@ -206,7 +210,7 @@ function total_cargado(total){ $(".response_upload_text").html(""+ total+"%"); $
 function total_cargado_kb(total){ $(".response_upload_text").html(""+ total+" kbs"); console.log(total+" kbs"); }
 
 function loadURL(url, container) {
-if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index?is_app="+is_app+"&token="+get_token; } else { url = url_server+"/_/" + url; }
+if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index"+params_loadurl; } else { url = url_server+"/_/" + url+params_loadurl; }
 if (debugState) { root.console.log("Loading URL: %c" + url, debugStyle); }
 console.log(url);
 
