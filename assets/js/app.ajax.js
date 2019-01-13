@@ -210,7 +210,7 @@ function total_cargado(total){ $(".response_upload_text").html(""+ total+"%"); $
 function total_cargado_kb(total){ $(".response_upload_text").html(""+ total+" kbs"); console.log(total+" kbs"); }
 
 function loadURL(url, container) {
-if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index"+params_loadurl; } else { url = url_server+"/_/" + url+params_loadurl; }
+if (url == "undefined" || url == null || url == "") { url = url_server+"/_/index"+params_loadurl; } else { url = url_server+"/_/" + url; }
 if (debugState) { root.console.log("Loading URL: %c" + url, debugStyle); }
 console.log(url);
 
