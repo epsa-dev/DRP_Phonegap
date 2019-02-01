@@ -295,7 +295,7 @@ $("html").animate({ scrollTop: 0 }, "fast");
 
 }}).done(function(data, textStatus, jqXHR) {
 var conti = $('#content');
-container.html("Ya casi...");
+//container.html("Ya casi...");
 conti.promise().done(function(){
 container.css({ opacity: '0.0' }).delay(50).animate({ opacity: '1.0' }, 300);
 container.html(data);
